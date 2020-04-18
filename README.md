@@ -9,6 +9,8 @@ A LaTeX template for job applications:
 
 To generate the CV only, just remove the rest and the table of contents. See for example http://stephaneghozzi.com/docs/cv_ghozzi.pdf
 
+![CV](cv-application-screenshot.png)*First pages of the CV part of the application.*
+
  ## Features
 
  - layout inspired by LinkedIn's that emphasizes the occupations and positions (not the dates)
