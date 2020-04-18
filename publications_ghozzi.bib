@@ -1,0 +1,132 @@
+@article{stojanovic2019,
+    author = {Stojanović, Olivera AND Leugering, Johannes AND Pipa, Gordon AND Ghozzi, Stéphane AND Ullrich, Alexander},
+    journal = {PLOS ONE},
+    publisher = {Public Library of Science},
+    title = {{A Bayesian Monte Carlo approach for predicting the spread of infectious diseases}},
+    year = {2019},
+    month = {12},
+    volume = {14},
+    url = {https://doi.org/10.1371/journal.pone.0225838},
+    pages = {1-20},
+    abstract = {In this paper, a simple yet interpretable, probabilistic model is proposed for the prediction of reported case counts of infectious diseases. A spatio-temporal kernel is derived from training data to capture the typical interaction effects of reported infections across time and space, which provides insight into the dynamics of the spread of infectious diseases. Testing the model on a one-week-ahead prediction task for campylobacteriosis and rotavirus infections across Germany, as well as Lyme borreliosis across the federal state of Bavaria, shows that the proposed model performs on-par with the state-of-the-art hhh4 model. However, it provides a full posterior distribution over parameters in addition to model predictions, which aides in the assessment of the model. The employed Bayesian Monte Carlo regression framework is easily extensible and allows for incorporating prior domain knowledge, which makes it suitable for use on limited, yet complex datasets as often encountered in epidemiology.},
+    number = {12},
+    doi = {10.1371/journal.pone.0225838}
+}
+
+@article {abbood2019,
+	author = {Abbood, Auss and Ullrich, Alexander and Busche, R{\"u}diger and Ghozzi, St{\'e}phane},
+	title = {{EventEpi {\textemdash} A Natural Language Processing Framework for Event-Based Surveillance}},
+	elocation-id = {19006395},
+	year = {2019},
+	doi = {10.1101/19006395},
+	publisher = {Cold Spring Harbor Laboratory Press},
+	abstract = {According to the World Health Organization (WHO), around 60\% of all outbreaks are detected using informal sources. In many public-health institutes, including the WHO and the Robert Koch Institute (RKI), dedicated groups of epidemiologists sift through numerous articles and newsletters to detect relevant events. This media screening is one important part of event-based surveillance (EBS). Reading the articles, discussing their relevance, and putting key information into a database is a time-consuming process. To support EBS, but also to gain insights into what makes an article and the event it describes relevant, we developed a natural-language-processing framework for automated information extraction and relevance scoring. First, we scraped relevant sources for EBS as done at RKI (WHO Disease Outbreak News and ProMED) and automatically extracted the articles{\textquoteright} key data: disease, country, date, and confirmed-case count. For this, we performed named entity recognition in two steps: EpiTator, an open-source epidemiological annotation tool, suggested many different possibilities for each. We trained a naive Bayes classifier to find the single most likely one using RKI{\textquoteright}s EBS database as labels. Then, for relevance scoring, we defined two classes to which any article might belong: The article is relevant if it is in the EBS database and irrelevant otherwise. We compared the performance of different classifiers, using document and word embeddings. Two of the tested algorithms stood out: The multilayer perceptron performed best overall, with a precision of 0.19, recall of 0.50, specificity of 0.89, F1 of 0.28, and the highest tested index balanced accuracy of 0.46. The support-vector machine, on the other hand, had the highest recall (0.88) which can be of higher interest for epidemiologists. Finally, we integrated these functionalities into a web application called EventEpi where relevant sources are automatically analyzed and put into a database. The user can also provide any URL or text, that will be analyzed in the same way and added to the database. Each of these steps could be improved, in particular with larger labeled datasets and fine-tuning of the learning algorithms. The overall framework, however, works already well and can be used in production, promising improvements in EBS. The source code is publicly available at https://github.com/aauss/EventEpi.Competing Interest StatementThe authors have declared no competing interest.Funding StatementThis work was funded by the German Federal Ministry of Health through the Signal 2.0 project (project number: 1368-1600).Author DeclarationsAll relevant ethical guidelines have been followed and any necessary IRB and/or ethics committee approvals have been obtained.Not ApplicableAll necessary patient/participant consent has been obtained and the appropriate institutional forms have been archived.Not ApplicableAny clinical trials involved have been registered with an ICMJE-approved registry such as ClinicalTrials.gov and the trial ID is included in the manuscript.Not ApplicableI have followed all appropriate research reporting guidelines and uploaded the relevant Equator, ICMJE or other checklist(s) as supplementary files, if applicable.Not ApplicableThe data is not available. The source code is publicly available.https://github.com/aauss/EventEpi},
+	URL_alt = {https://www.medrxiv.org/content/early/2019/09/26/19006395},
+  url = {https://doi.org/10.1101/19006395},
+	eprint = {https://www.medrxiv.org/content/early/2019/09/26/19006395.full.pdf},
+	journal = {medRxiv}
+}
+
+@article{zacher2019,
+	author = {Zacher, Benedikt and Ullrich, Alexander and Ghozzi, Stéphane},
+	title = {{Supervised Learning for Automated Infectious-Disease-Outbreak Detection}},
+	journal = {Online Journal of Public Health Informatics},
+	volume = {11},
+	number = {1},
+	year = {2019},
+	keywords = {},
+	abstract = {Objective By systematically scoring algorithms and integrating outbreak data through statistical learning, evaluate and improve the performance of automated infectious-disease-outbreak detection. The improvements should be directly relevant to the epidemiological practice. A broader objective is to explore the usefulness of machine-learning approaches in epidemiology.IntroductionWithin the traditional surveillance of notifiable infectious diseases in Germany, not only are individual cases reported to the Robert Koch Institute, but also outbreaks themselves are recorded: A label is assigned by epidemiologists to each case, indicating whether it is part of an outbreak and of which. This expert knowledge represents, in the language of machine leaning, a \"ground truth\" for the algorithmic task of detecting outbreaks from a stream of surveillance data. The integration of this kind of information in the design and evaluation of algorithms is called supervised learning.MethodsReported cases were aggregated weekly and divided into two count time series, one for endemic (not part of an outbreak) and one for epidemic cases. Two new algorithms were developed for the analysis of such time series: farringtonOutbreak is an adaptation of the standard method farringtonFlexible as implemented in the surveillance R package: It trains on endemic case counts but detects anomalies on total case counts. The second algorithm is hmmOutbreak, which is based on a hidden Markov model (HMM): A binary hidden state indicates whether an outbreak was reported in a given week, the transition matrix for this state is learned from the outbreak data and this state is integrated as factor in a generalised linear model of the total case count. An explicit probability of being in a state of outbreak is then computed for each week (one-week ahead) and a signal is generated if it is higher than a user-defined threshold.To evaluate performance, we framed outbreak detection as a simple binary classification problem: Is there an outbreak in a given week, yes or no? Was a signal generated for this week, yes or no? One can thus count, for each time series, the true positives (outbreak data and signals agree), false positives, true negatives and false negatives. From those, classical performance scores can be computed, such as sensitivity, specificity, precision, F-score or area under the ROC curve (AUC).For the evaluation with real-word data we used time series of reported cases of salmonellosis and campylobacteriosis for each of the 412 German counties over 9 years. We also ran simple simulations with different parameter sets, generating count time series and outbreaks with the sim.pointSource function of the surveillance R package.ResultsWe have developed a supervised-learning framework for outbreak detection based on reported infections and outbreaks, proposing two algorithms and an evaluation method. hmmOutbreak performs overall much better than the standard farringtonFlexible, with e.g. a 60% improvement in sensitivity (0.5 compared to 0.3) at a fixed specificity of 0.9. The results were confirmed by simulations. Furthermore, the computation of explicit outbreak probabilities allows a better and clearer interpretation of detection results than the usual testing of the null hypothesis \"is endemic\".ConclusionsMethods of machine learning can be usefully applied in the context of infectious-disease surveillance. Already a simple HMM shows large improvements and better interpretability: More refined methods, in particular semi-supervised approaches, look thus very promising. The systematic integration of available expert knowledge, in this case the recording of outbreaks, allows an evaluation of algorithmic performance that is of direct relevance for the epidemiological practice, in contrast to the usual intrinsic statistical metrics. Beyond that, this knowledge can be readily used to improve that performance and, in the future, gain insights in outbreak dynamics. Moreover, other types of labels will be similarly integrated in automated surveillance analyses, e.g. user feedback on whether a signal was relevant (reinforcement learning) or messages on specialised internet platforms that were found to be useful warnings of international epidemic events.},
+	issn = {1947-2579},	
+  doi = {10.5210/ojphi.v11i1.9770},
+	url_alt = {https://journals.uic.edu/ojs/index.php/ojphi/article/view/9770},
+  url = {https://doi.org/10.5210/ojphi.v11i1.9770}
+}
+
+@article{eckelmann2019,
+	author = {Eckelmann, Fabian and Ghozzi, Stéphane and Ullrich, Alexander},
+	title = {{Dashboards as strategy to integrate multiple data streams for real time surveillance}},
+	journal = {Online Journal of Public Health Informatics},
+	volume = {11},
+	number = {1},
+	year = {2019},
+	keywords = {},
+	abstract = {Objective Providing an integrative tool for public health experts to rapidly assess the epidemiological situation based on data streams from different surveillance systems and relevant external factors, e.g. weather or socio-economic conditions. The efficient implementation in a modular architecture of disease- or task-specific visualisations and interactions, their combination in dashboards and integration in a consistent, general web application. The user-oriented development through an iterative process in close collaboration with epidemiologists.IntroductionThe mission of the Infectious-Disease-Epidemiology Department at the Robert Koch Institute is the prevention, detection and control of infections in the German population. For this purpose it has a set of surveillance and outbreak-detection systems in place. Some of these cover a wide range of diseases, e.g. the traditional surveillance of about 80 notifiable diseases, while others are specialised for the timely assessment of only one or a few diseases, e.g. participatory syndromic surveillance of acute respiratory infections. Many different such data sources have to be combined to allow a holistic view of the epidemiological situation. The continuous integration of many heterogeneous data streams into a readily available and accessible product remains a big challenge in infectious-disease epidemiology.MethodsThe first step in the development of visualisation and analysis dashboards was the identification of relevant epidemiological questions. This was done through the review and analysis of existing epidemiological tools and workflows, among others through surveys and interviews. With the help of domain experts we identified the relevant data sources for specific tasks. We then chose data visualisations that are common in the field of infectious-disease epidemiology, e.g. disease maps, epicurves and age pyramids, as well as visualisations that were suggested by experts, e.g. time-series graph with severity thresholds. In an iterative process of propositions and expert feedback, we refined the user experience, adjusting variables, control parameters and the layout.We have used two different technologies for the dashboard development. For tasks that needed extensive data integration and statistical computing we used the Shiny web-framework of the statistical programming language R, which allows for a seamless integration of data-wrangling, statistical methods and web design with interactive visualizations. For tasks where a more flexible and fluid user experience is desired and for the integration in a general web application, we used the more versatile single-page application (SPA) framework AngularJS in combination with ASP.NET. In both approaches we used standard open-source visualisation libraries such as Leaflet or Plotly. The dashboards were designed in a modular way, abstracting data sources and visualisations in order to reuse them and adapt them easily to other data sources. Where applicable, interfaces to live data bases and OLAP cubes where developed and implemented.ResultsWe have developed a set of dashboards that allow the exploration of infectious-disease data, each designed for a specific epidemiological task. While still under active development, the dashboards are accepted and routinely used by epidemiologists of the Robert Koch Institute. The expansion to other user groups (e.g. local health agencies) is planned for the near future. Further dashboards will be developed as new epidemiological tasks are identified.A general dashboard (\"Signals Dashboard\", see Figure 1 A) is displaying laboratory confirmed cases and their distribution across time, space, age and sex in linked widgets. Additionally it highlights anomalous clusters of cases in all widgets and lists the anomalies in an interactive table. The dashboard is available for all (approx. 80) notifiable diseases. The \"Severity Dashboard\" (Figure 1 B) integrates influenza-related syndromic data, virological information and laboratory confirmed cases. The indicators transmissibility, seriousness and impact, as defined by the PISA guidelines of the World Health Organization, are displayed in time-series charts (absolute and cumulative) and tables; parameter-adjustable severity assessments are computed on the fly. This dashboard has then been adapted to monitor in real time the severity of rotavirus infections. One further dashboard focusses on vaccine-preventable diseases and allows the simultaneous exploration of incidences and vaccination rates through synchronized maps and histograms. Lastly, a \"Context Dashboard\" enables the exploration of possible connections between tick-related diseases such as TBE and Lyme disease on the one hand, and weather and environment as external factors on the other. It provides visual comparisons through maps and time-series charts, correlation analysis and statistical modeling. The user can choose a set of (lagged) variables to be included in a linear statistical model, which is immediately trained. The contributions and significance of the chosen factors, as well as the fit and prediction accuracies, are displayed in tables, scatter plots and time series. Both \"Signals\" and \"Severity\" dashboards serve the rapid assessment of the epidemiological situation and as such display live data as read from internal databases and cubes. The others are at present rather meant for retrospective analyses but will be connected to live data streams in the future.ConclusionsDashboards can provide a way to integrate different epidemiological data streams and statistical methods, offering experts a useful tool to assess the epidemiological situation. Close collaboration between epidemiologists and data scientists in the design and development is beneficial to the relevance and sustainability of such a tool. },
+	issn = {1947-2579},	
+  doi = {10.5210/ojphi.v11i1.9701},
+	url_alt = {https://journals.uic.edu/ojs/index.php/ojphi/article/view/9701},
+  url = {https://doi.org/10.5210/ojphi.v11i1.9701}
+}
+
+@article{sarma2018,
+   author = {Sarma, Navina and Ullrich, Alexander and Wilking, Hendrik and Ghozzi, Stéphane and Lindner, Andreas K. and Weber, Christoph and Holzer, Alexandra and Jansen, Andreas and Stark, Klaus and Vygen-Bonnet, Sabine},
+   title = {{Surveillance on speed: Being aware of infectious diseases in migrants mass accommodations - an easy and flexible toolkit for field application of syndromic surveillance, Germany, 2016 to 2017}},
+   journal = {Eurosurveillance},
+   year = {2018},
+   volume = {23},
+   number = {40}, 
+   eid = {1700430},
+   pages = {},
+   url_alt = {https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2018.23.40.1700430},
+   url = {https://doi.org/10.2807/1560-7917.ES.2018.23.40.1700430},
+   doi = {10.2807/1560-7917.ES.2018.23.40.1700430}
+}
+
+@article{perfeito2011,
+    author = {Perfeito, Lilia AND Ghozzi, Stéphane AND Berg, Johannes AND Schnetz, Karin AND Lässig, Michael},
+    journal = {PLOS Genetics},
+    publisher = {Public Library of Science},
+    title = {{Nonlinear Fitness Landscape of a Molecular Pathway}},
+    year = {2011},
+    month = {07},
+    volume = {7},
+    url = {https://doi.org/10.1371/journal.pgen.1002160},
+    pages = {1-10},
+    abstract = {Author Summary The levels of protein produced by an organism are likely to change its fitness, potentially driving the evolution of genetic regulation. Importantly, protein expression generates costs as well as benefits. Here, we use a model genetic system, the lac operon of Escherichia coli, to investigate different sources of fitness costs. We find that fitness depends not only on the production rate of proteins but also on their enzymatic activity. A simple quantitative model, which is based on the biophysics of protein production and activity, accurately reproduces the experimental results and provides testable predictions. The model describes a feedback cycle between a molecular pathway and the growth rate of cells: pathway activity impedes growth, but growth itself affects the pathway. This feedback can generate dramatic effects, such as gene expression barriers, fitness cliffs, and population extinctions, which can be triggered by small environmental or genetic changes. Our results disentangle the complex interplay of protein production and activity, and they show how these processes shape the evolution of simple organisms.},
+    number = {7},
+    doi = {10.1371/journal.pgen.1002160}
+}
+
+@article{ghozzi2010,
+  title = {{Inference of plasmid-copy-number mean and noise from single-cell gene expression data}},
+  author = {Ghozzi, Stéphane and Wong Ng, J\'er\^ome and Chatenay, Didier and Robert, J\'er\^ome},
+  journal = {Phys. Rev. E},
+  volume = {82},
+  issue = {5},
+  pages = {051916},
+  numpages = {8},
+  year = {2010},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevE.82.051916},
+  url_alt = {https://link.aps.org/doi/10.1103/PhysRevE.82.051916},
+  url = {https://doi.org/10.1103/PhysRevE.82.051916}
+}
+
+@phdthesis{ghozzi2009,
+  TITLE = {{Expression Dynamics of a Genetic Regulatory Network: the Lysis/Lysogeny Decision of Bacteriophage Lambda}},
+  AUTHOR = {Ghozzi, Stéphane},
+  URL = {https://tel.archives-ouvertes.fr/tel-00515109},
+  SCHOOL = {{Universit{\'e} Pierre et Marie Curie - Paris VI}},
+  YEAR = {2009},
+  MONTH = Dec,
+  KEYWORDS = {expression g{\'e}n{\'e}tique stochastique ; r{\'e}seua de r{\'e}gulation g{\'e}n{\'e}tique},
+  TYPE = {Theses},
+  PDF = {https://tel.archives-ouvertes.fr/tel-00515109/file/TheseLambda_Ghozzi_2009_ht-pp.pdf},
+  HAL_ID = {tel-00515109},
+  HAL_VERSION = {v1},
+}
+
+@article{ghozzi2004,
+title = {{Isospin violating effects in {$e^{+} e^{−}$} vs. {$\tau$} measurements of the pion form factor {$|F_\pi|^2(s)$}}},
+journal = {Physics Letters B},
+volume = {583},
+number = {3},
+pages = {222 - 230},
+year = {2004},
+issn = {0370-2693},
+doi = {10.1016/j.physletb.2004.01.021},
+url_alt = {http://www.sciencedirect.com/science/article/pii/S0370269304001546},
+url = {https://doi.org/10.1016/j.physletb.2004.01.021},
+author = {Ghozzi, Stéphane and Jegerlehner, Fred},
+abstract = {We study possible so far unaccounted isospin breaking effects in the relation between the pion form factor as determined in e+e− experiments and the corresponding quantity obtained after accounting for known isospin breaking effects by an isospin rotation from the τ-decay spectra. In fact the observed 10% discrepancy in the respective pion form factors may be explained by the isospin breaking which is due to the difference between masses and widths of the charged and neutral ρ mesons. Since the hadronic contribution to the muon anomalous magnetic moment can be calculated directly in terms of the e+e−-data the corresponding evaluation seems to be more reliable. Our estimate is aμhad(1)=(694.8±8.6)×10−10. The τ-data are useful at the presently aimed level of accuracy only after appropriate input from theory.}
+}
