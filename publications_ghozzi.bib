@@ -1,3 +1,31 @@
+@article{abbood2020,
+    author = {Abbood, Auss AND Ullrich, Alexander AND Busche, Rüdiger AND Ghozzi, Stéphane},
+    journal = {PLOS Computational Biology},
+    publisher = {Public Library of Science},
+    title = {EventEpi—A natural language processing framework for event-based surveillance},
+    year = {2020},
+    month = {11},
+    volume = {16},
+    url = {https://doi.org/10.1371/journal.pcbi.1008277},
+    pages = {1-16},
+    abstract = {Author summary Public health surveillance that uses official sources to detect important disease outbreaks suffers from a time delay. Using unofficial sources, like websites, to detect rumors of disease outbreaks can offer a decisive temporal advantage. Due to the vast amount of information on the web, public health agents are only capable to process a fraction of the available information. Recent advances in natural language processing and deep learning offer new opportunities to process large amounts of text with human-like understanding. However, to the best of our knowledge, no open-source solutions using natural language processing for public health surveillance exist. We extracted expert labels from a public health unit that screens online resources every day to train various machine learning models and perform key information extraction as well as relevance scoring on epidemiological texts. With the help of those expert labels, we scraped and annotated news articles to create inputs for the machine learning models. The scraped texts were transformed into word embeddings that were trained on 61,320 epidemiological articles and the Wikipedia corpus (May 2020). We were able to extract key information from epidemiological texts such as disease, outbreak country, cases counts, and the date of these counts. While disease and country could be extracted with high accuracy, date and count could still be extracted with medium accuracy with the help of machine learning models. Furthermore, our model could detect 82% of all relevant articles in an unseen test dataset. Both of these functionalities were embedded into a web application. We present an open-source framework that public health agents can use to include online sources into their screening routine. This can be of great help to existing and emerging public health institutions. Although parts of the information extraction function robustly and the relevance scoring could already save public health agent’s time, methods to explain deep and machine learning models showed that the learned patterns are sometimes implausible. This could be improved with more labeled data and optimization of the learning algorithms.},
+    number = {11},
+    doi = {10.1371/journal.pcbi.1008277}
+}
+
+@article {jombart2020,
+	author = {Jombart*, Thibaut and Ghozzi*, Stéphane and Schumacher, Dirk and Leclerc, Quentin and Jit, Mark and Flasche, Stefan and Greaves, Felix and Ward, Tom and Eggo, Rosalind M and Nightingale, Emily and Meakin, Sophie and Brady, Oliver J and {Centre for Mathematical Modelling of Infectious Diseases COVID-19 Working Group} and Medley, Graham and Höhle, Michael and Edmunds, John},
+	title = {Real-time monitoring of {COVID-19} dynamics using automated trend fitting and anomaly detection},
+	elocation-id = {2020.09.02.20186502},
+	year = {2020},
+	doi = {10.1101/2020.09.02.20186502},
+	publisher = {Cold Spring Harbor Laboratory Press},
+	abstract = {As several countries gradually release social distancing measures, rapid detection of new localised COVID-19 hotspots and subsequent intervention will be key to avoiding large-scale resurgence of transmission. We introduce ASMODEE (Automatic Selection of Models and Outlier Detection for Epidemics), a new tool for detecting sudden changes in COVID-19 incidence. Our approach relies on automatically selecting the best (fitting or predicting) model from a range of user-defined time series models, excluding the most recent data points, to characterise the main trend in an incidence. We then derive prediction intervals and classify data points outside this interval as outliers, which provides an objective criterion for identifying departures from previous trends. We also provide a method for selecting the optimal breakpoints, used to define how many recent data points are to be excluded from the trend fitting procedure. The analysis of simulated COVID-19 outbreaks suggest ASMODEE compares favourably with a state-of-art outbreak-detection algorithm while being simpler and more flexible. We illustrate our method using publicly available data of NHS Pathways reporting potential COVID-19 cases in England at a fine spatial scale, for which we provide a template automated analysis pipeline. ASMODEE is implemented in the free R package trendbreaker.},
+	URL = {https://doi.org/10.1101/2020.09.02.20186502},
+	eprint = {https://www.medrxiv.org/content/early/2020/09/03/2020.09.02.20186502.full.pdf},
+	journal = {medRxiv}
+}
+
 @article{stojanovic2019,
     author = {Stojanović, Olivera AND Leugering, Johannes AND Pipa, Gordon AND Ghozzi, Stéphane AND Ullrich, Alexander},
     journal = {PLOS ONE},
@@ -11,20 +39,6 @@
     abstract = {In this paper, a simple yet interpretable, probabilistic model is proposed for the prediction of reported case counts of infectious diseases. A spatio-temporal kernel is derived from training data to capture the typical interaction effects of reported infections across time and space, which provides insight into the dynamics of the spread of infectious diseases. Testing the model on a one-week-ahead prediction task for campylobacteriosis and rotavirus infections across Germany, as well as Lyme borreliosis across the federal state of Bavaria, shows that the proposed model performs on-par with the state-of-the-art hhh4 model. However, it provides a full posterior distribution over parameters in addition to model predictions, which aides in the assessment of the model. The employed Bayesian Monte Carlo regression framework is easily extensible and allows for incorporating prior domain knowledge, which makes it suitable for use on limited, yet complex datasets as often encountered in epidemiology.},
     number = {12},
     doi = {10.1371/journal.pone.0225838}
-}
-
-@article {abbood2019,
-	author = {Abbood, Auss and Ullrich, Alexander and Busche, R{\"u}diger and Ghozzi, St{\'e}phane},
-	title = {{EventEpi {\textemdash} A Natural Language Processing Framework for Event-Based Surveillance}},
-	elocation-id = {19006395},
-	year = {2019},
-	doi = {10.1101/19006395},
-	publisher = {Cold Spring Harbor Laboratory Press},
-	abstract = {According to the World Health Organization (WHO), around 60\% of all outbreaks are detected using informal sources. In many public-health institutes, including the WHO and the Robert Koch Institute (RKI), dedicated groups of epidemiologists sift through numerous articles and newsletters to detect relevant events. This media screening is one important part of event-based surveillance (EBS). Reading the articles, discussing their relevance, and putting key information into a database is a time-consuming process. To support EBS, but also to gain insights into what makes an article and the event it describes relevant, we developed a natural-language-processing framework for automated information extraction and relevance scoring. First, we scraped relevant sources for EBS as done at RKI (WHO Disease Outbreak News and ProMED) and automatically extracted the articles{\textquoteright} key data: disease, country, date, and confirmed-case count. For this, we performed named entity recognition in two steps: EpiTator, an open-source epidemiological annotation tool, suggested many different possibilities for each. We trained a naive Bayes classifier to find the single most likely one using RKI{\textquoteright}s EBS database as labels. Then, for relevance scoring, we defined two classes to which any article might belong: The article is relevant if it is in the EBS database and irrelevant otherwise. We compared the performance of different classifiers, using document and word embeddings. Two of the tested algorithms stood out: The multilayer perceptron performed best overall, with a precision of 0.19, recall of 0.50, specificity of 0.89, F1 of 0.28, and the highest tested index balanced accuracy of 0.46. The support-vector machine, on the other hand, had the highest recall (0.88) which can be of higher interest for epidemiologists. Finally, we integrated these functionalities into a web application called EventEpi where relevant sources are automatically analyzed and put into a database. The user can also provide any URL or text, that will be analyzed in the same way and added to the database. Each of these steps could be improved, in particular with larger labeled datasets and fine-tuning of the learning algorithms. The overall framework, however, works already well and can be used in production, promising improvements in EBS. The source code is publicly available at https://github.com/aauss/EventEpi.Competing Interest StatementThe authors have declared no competing interest.Funding StatementThis work was funded by the German Federal Ministry of Health through the Signal 2.0 project (project number: 1368-1600).Author DeclarationsAll relevant ethical guidelines have been followed and any necessary IRB and/or ethics committee approvals have been obtained.Not ApplicableAll necessary patient/participant consent has been obtained and the appropriate institutional forms have been archived.Not ApplicableAny clinical trials involved have been registered with an ICMJE-approved registry such as ClinicalTrials.gov and the trial ID is included in the manuscript.Not ApplicableI have followed all appropriate research reporting guidelines and uploaded the relevant Equator, ICMJE or other checklist(s) as supplementary files, if applicable.Not ApplicableThe data is not available. The source code is publicly available.https://github.com/aauss/EventEpi},
-	URL_alt = {https://www.medrxiv.org/content/early/2019/09/26/19006395},
-  url = {https://doi.org/10.1101/19006395},
-	eprint = {https://www.medrxiv.org/content/early/2019/09/26/19006395.full.pdf},
-	journal = {medRxiv}
 }
 
 @article{zacher2019,

@@ -7,7 +7,11 @@ A LaTeX template for job applications:
 - research summary
 - referees
 
-To generate the CV only, just remove the rest and the table of contents. See for example http://stephaneghozzi.com/docs/cv_ghozzi.pdf
+The template itself is [cv-application.tex](cv-application.tex) with the PDF output [cv-application.pdf](cv-application.pdf).
+
+To generate the CV only, just remove the rest and the table of contents, and adapt the footer. See for example [cv-ghozzi.tex](cv-ghozzi.tex) and [cv-ghozzi.pdf](cv-ghozzi.pdf).
+
+Overall the layout should also be adapted to the content to avoid as much as possible bad page breaks.
 
 ![CV](cv-application-screenshot.png)*First pages of the CV part of the application.*
 
