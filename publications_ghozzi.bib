@@ -1,9 +1,24 @@
+@article{jombart2021,
+    abstract = {As several countries gradually release social distancing measures, rapid detection of new localized COVID-19 hotspots and subsequent intervention will be key to avoiding large-scale resurgence of transmission. We introduce ASMODEE (automatic selection of models and outlier detection for epidemics), a new tool for detecting sudden changes in COVID-19 incidence. Our approach relies on automatically selecting the best (fitting or predicting) model from a range of user-defined time series models, excluding the most recent data points, to characterize the main trend in an incidence. We then derive prediction intervals and classify data points outside this interval as outliers, which provides an objective criterion for identifying departures from previous trends. We also provide a method for selecting the optimal breakpoints, used to define how many recent data points are to be excluded from the trend fitting procedure. The analysis of simulated COVID-19 outbreaks suggests ASMODEE compares favourably with a state-of-art outbreak-detection algorithm while being simpler and more flexible. As such, our method could be of wider use for infectious disease surveillance. We illustrate ASMODEE using publicly available data of National Health Service (NHS) Pathways reporting potential COVID-19 cases in England at a fine spatial scale, showing that the method would have enabled the early detection of the flare-ups in Leicester and Blackburn with Darwen, two to three weeks before their respective lockdown. ASMODEE is implemented in the free R package trendbreaker.},
+    author = {Jombart*, Thibaut and Ghozzi*, St{\'{e}}phane and Schumacher, Dirk and Taylor, Timothy J. and Leclerc, Quentin J. and Jit, Mark and Flasche, Stefan and Greaves, Felix and Ward, Tom and Eggo, Rosalind M. and Nightingale, Emily and Meakin, Sophie and Brady, Oliver J. and {Centre for Mathematical Modelling of Infectious Diseases COVID-19 Working Group} and Medley, Graham F. and H{\"{o}}hle, Michael and Edmunds, W. John},
+    doi = {10.1098/rstb.2020.0266},
+    issn = {0962-8436},
+    journal = {Philosophical Transactions of the Royal Society B: Biological Sciences},
+    month = {jul},
+    number = {1829},
+    pages = {20200266},
+    title = {{Real-time monitoring of COVID-19 dynamics using automated trend fitting and anomaly detection}},
+    url = {https://doi.org/10.1098/rstb.2020.0266},
+    volume = {376},
+    year = {2021}
+}
+
 @article{becker2021,
     author = {Becker, Matthias AND Strengert, Monika AND Junker, Daniel AND Kaiser, Philipp D. AND Kerrinnes, Tobias AND Traenkle, Bjoern AND Dinter, Heiko AND Häring, Julia AND Ghozzi, Stéphane AND Zeck, Anne AND Weise, Frank AND Peter, Andreas AND Hörber, Sebastian AND Fink, Simon AND Ruoff, Felix AND Dulovic, Alex AND Bakchoul, Tamam AND Baillot, Armin AND Lohse, Stefan AND Cornberg, Markus AND Illig, Thomas AND Gottlieb, Jens AND Smola, Sigrun AND Karch, André AND Berger, Klaus AND Rammensee, Hans-Georg AND Schenke-Layland, Katja AND Nelde, Annika AND Märklin, Melanie AND Heitmann, Jonas S. AND Walz, Juliane S. AND Templin, Markus AND Joos, Thomas O. AND Rothbauer, Ulrich AND Krause, Gérard AND Schneiderhan-Marra, Nicole},
     year = {2021},
     month = {02},
     day = {19},
-    title = {Exploring beyond clinical routine SARS-CoV-2 serology using MultiCoV-Ab to evaluate endemic coronavirus cross-reactivity},
+    title = {{Exploring beyond clinical routine SARS-CoV-2 serology using MultiCoV-Ab to evaluate endemic coronavirus cross-reactivity}},
     journal = {Nature Communications},
     volume = {12},
     abstract = {The humoral immune response to SARS-CoV-2 is a benchmark for immunity and detailed analysis is required to understand the manifestation and progression of COVID-19, monitor seroconversion within the general population, and support vaccine development. The majority of currently available commercial serological assays only quantify the SARS-CoV-2 antibody response against individual antigens, limiting our understanding of the immune response. To overcome this, we have developed a multiplex immunoassay (MultiCoV-Ab) including spike and nucleocapsid proteins of SARS-CoV-2 and the endemic human coronaviruses. Compared to three broadly used commercial in vitro diagnostic tests, our MultiCoV-Ab achieves a higher sensitivity and specificity when analyzing a well-characterized sample set of SARS-CoV-2 infected and uninfected individuals. We find a high response against endemic coronaviruses in our sample set, but no consistent cross-reactive IgG response patterns against SARS-CoV-2. Here we show a robust, high-content-enabled, antigen-saving multiplex assay suited to both monitoring vaccination studies and facilitating epidemiologic screenings for humoral immunity towards pandemic and endemic coronaviruses.},
@@ -15,7 +30,7 @@
     author = {Abbood, Auss AND Ullrich, Alexander AND Busche, Rüdiger AND Ghozzi, Stéphane},
     journal = {PLOS Computational Biology},
     publisher = {Public Library of Science},
-    title = {EventEpi—A natural language processing framework for event-based surveillance},
+    title = {{EventEpi — A natural language processing framework for event-based surveillance}},
     year = {2020},
     month = {11},
     volume = {16},
@@ -24,19 +39,6 @@
     abstract = {Author summary Public health surveillance that uses official sources to detect important disease outbreaks suffers from a time delay. Using unofficial sources, like websites, to detect rumors of disease outbreaks can offer a decisive temporal advantage. Due to the vast amount of information on the web, public health agents are only capable to process a fraction of the available information. Recent advances in natural language processing and deep learning offer new opportunities to process large amounts of text with human-like understanding. However, to the best of our knowledge, no open-source solutions using natural language processing for public health surveillance exist. We extracted expert labels from a public health unit that screens online resources every day to train various machine learning models and perform key information extraction as well as relevance scoring on epidemiological texts. With the help of those expert labels, we scraped and annotated news articles to create inputs for the machine learning models. The scraped texts were transformed into word embeddings that were trained on 61,320 epidemiological articles and the Wikipedia corpus (May 2020). We were able to extract key information from epidemiological texts such as disease, outbreak country, cases counts, and the date of these counts. While disease and country could be extracted with high accuracy, date and count could still be extracted with medium accuracy with the help of machine learning models. Furthermore, our model could detect 82% of all relevant articles in an unseen test dataset. Both of these functionalities were embedded into a web application. We present an open-source framework that public health agents can use to include online sources into their screening routine. This can be of great help to existing and emerging public health institutions. Although parts of the information extraction function robustly and the relevance scoring could already save public health agent’s time, methods to explain deep and machine learning models showed that the learned patterns are sometimes implausible. This could be improved with more labeled data and optimization of the learning algorithms.},
     number = {11},
     doi = {10.1371/journal.pcbi.1008277}
-}
-
-@article {jombart2020,
-	author = {Jombart*, Thibaut and Ghozzi*, Stéphane and Schumacher, Dirk and Leclerc, Quentin and Jit, Mark and Flasche, Stefan and Greaves, Felix and Ward, Tom and Eggo, Rosalind M and Nightingale, Emily and Meakin, Sophie and Brady, Oliver J and {Centre for Mathematical Modelling of Infectious Diseases COVID-19 Working Group} and Medley, Graham and Höhle, Michael and Edmunds, John},
-	title = {Real-time monitoring of {COVID-19} dynamics using automated trend fitting and anomaly detection},
-	elocation-id = {2020.09.02.20186502},
-	year = {2020},
-	doi = {10.1101/2020.09.02.20186502},
-	publisher = {Cold Spring Harbor Laboratory Press},
-	abstract = {As several countries gradually release social distancing measures, rapid detection of new localised COVID-19 hotspots and subsequent intervention will be key to avoiding large-scale resurgence of transmission. We introduce ASMODEE (Automatic Selection of Models and Outlier Detection for Epidemics), a new tool for detecting sudden changes in COVID-19 incidence. Our approach relies on automatically selecting the best (fitting or predicting) model from a range of user-defined time series models, excluding the most recent data points, to characterise the main trend in an incidence. We then derive prediction intervals and classify data points outside this interval as outliers, which provides an objective criterion for identifying departures from previous trends. We also provide a method for selecting the optimal breakpoints, used to define how many recent data points are to be excluded from the trend fitting procedure. The analysis of simulated COVID-19 outbreaks suggest ASMODEE compares favourably with a state-of-art outbreak-detection algorithm while being simpler and more flexible. We illustrate our method using publicly available data of NHS Pathways reporting potential COVID-19 cases in England at a fine spatial scale, for which we provide a template automated analysis pipeline. ASMODEE is implemented in the free R package trendbreaker.},
-	URL = {https://doi.org/10.1101/2020.09.02.20186502},
-	eprint = {https://www.medrxiv.org/content/early/2020/09/03/2020.09.02.20186502.full.pdf},
-	journal = {medRxiv}
 }
 
 @article{stojanovic2019,
