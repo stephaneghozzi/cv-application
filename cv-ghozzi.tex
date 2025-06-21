@@ -4,7 +4,8 @@
 \usepackage{lmodern,textcomp}
 \usepackage[document]{ragged2e}
 \usepackage{longtable}
-\usepackage[USenglish]{babel}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
 \usepackage[dvipsnames]{xcolor}
 
 \usepackage[calc,useregional]{datetime2}
@@ -83,7 +84,8 @@
 \usepackage{cite}
 
 \begin{document}
-\selectlanguage{USenglish}
+\selectlanguage{UKenglish}
+\cleanlookdateon
 
 \noindent\begin{minipage}{0.7\linewidth}
    \LARGE
@@ -122,7 +124,7 @@
    \Large{Experience} & \\
    & \\
    \textbf{Data scientist} & \textbf{World Health Organization (WHO)} \\
-   & {\color{gray}\DTMdisplaydate{2023}{5}{25}{-1} -- present $\cdot$ \difftoday{2023}{5}{25}} \\ 
+   & {\color{gray}\printdate{2023-5-25} -- present $\cdot$ \difftoday{2023}{5}{25}} \\ 
    & {\color{gray}Berlin, Germany} \\
    & WHO Hub for Pandemic and Epidemic Intelligence \\
    & \href{https://pandemichub.who.int}{pandemichub.who.int} \\
@@ -155,14 +157,14 @@
    & \\
    & \\      
    \textbf{Data scientist} & \textbf{Independent developer and consultant} \\
-   & {\color{gray}\DTMdisplaydate{2022}{11}{1}{-1} -- \DTMdisplaydate{2023}{5}{24}{-1} $\cdot$ 7 mos} \\ 
+   & {\color{gray}\printdate{2022-11-1} -- \printdate{2023-5-24} $\cdot$ 7 mos} \\ 
    & {\color{gray}Berlin, Germany} \\
    & \href{https://stephaneghozzi.com}{stephaneghozzi.com} \\
    & Research, statistics, machine learning, data visualization. \\
    & \\
    & \\   
    \textbf{Research} & \textbf{Helmholtz-Zentrum für Infektionsforschung (HZI)} \\
-   \textbf{associate} & {\color{gray}\DTMdisplaydate{2020}{6}{1}{-1} -- \DTMdisplaydate{2022}{5}{31}{-1} $\cdot$ 2 yrs} \\ 
+   \textbf{associate} & {\color{gray}\printdate{2020-6-1} -- \printdate{2022-5-31} $\cdot$ 2 yrs} \\ 
    & {\color{gray} Brunswick (Braunschweig), Germany} \\
    & \href{https://www.helmholtz-hzi.de/en/research/research-topics/bacterial-and-viral-pathogens/epidemiology/our-research/}{helmholtz-hzi.de/en/research/research-topics/bacterial-and-viral-pathogens/epidemiology/our-research/} $\cdot$ \href{https://sormas.org}{sormas.org} \\ 
    & Senior scientist, statistical methods and tools for public health, in the Epidemiology department (Krause group). \\
@@ -181,7 +183,7 @@
    & \\
    & \\
    \textbf{Research} & \textbf{Robert-Koch Institut (RKI)} \\
-   \textbf{associate} & {\color{gray}\DTMdisplaydate{2016}{4}{15}{-1} -- \DTMdisplaydate{2020}{5}{31}{-1} $\cdot$ 4 yrs 2 mos}\\ 
+   \textbf{associate} & {\color{gray}\printdate{2016-4-15} -- \printdate{2020-5-31} $\cdot$ 4 yrs 2 mos}\\ 
    & {\color{gray}Berlin, Germany}\\
    & \href{https://www.rki.de/signale-project}{rki.de/signale-project} \\
    & Machine learning, informatics, statistics and visualizations, Signale team, Department of Infectious-Disease Epidemiology. \\
@@ -208,7 +210,7 @@
    & \\
    & \textbf{World Health Organization (WHO)} \\
    & \textbf{Secondee from RKI} \\
-   & {\color{gray}\DTMdisplaydate{2019}{5}{1}{-1} -- \DTMdisplaydate{2019}{10}{31}{-1} $\cdot$ 6 mos} \\ 
+   & {\color{gray}\printdate{2019-5-1} -- \printdate{2019-10-31} $\cdot$ 6 mos} \\ 
    & {\color{gray}Geneva, Switzerland} \\
    & \href{https://www.who.int/eios}{who.int/eios} $\cdot$ \href{https://www.who.int/emergencies/outbreak-toolkit}{who.int/emergencies/outbreak-toolkit} \\
    & Machine learning and web-application development for epidemic intelligence and investigation of outbreaks of unknown origins. \\
@@ -219,7 +221,7 @@
    & \\
    & \\
    \textbf{Visual artist} & \textbf{Self employed} \\
-   & {\color{gray}\DTMdisplaydate{2012}{3}{1}{-1} -- \DTMdisplaydate{2016}{4}{14}{-1} $\cdot$ 4 yrs 1 mo} \\ 
+   & {\color{gray}\printdate{2012-3-1} -- \printdate{2016-4-14} $\cdot$ 4 yrs 1 mo} \\ 
    & {\color{gray}Berlin, Germany} \\
    & Portfolio as of 2014 (pdf): \href{https://stephaneghozzi.com/docs/portfolio-ghozzi.pdf}{stephaneghozzi.com/docs/portfolio-ghozzi.pdf} \\
    & Drawing, generative animation, photography, video, computer animation. \\
@@ -235,7 +237,7 @@
    & \\
    & \\
    \textbf{Postdoctoral} & \textbf{Institut für Theoretische Physik (THP), Universität zu Köln}\\
-   \textbf{researcher} & {\color{gray}\DTMdisplaydate{2010}{3}{1}{-1} -- \DTMdisplaydate{2012}{2}{29}{-1} $\cdot$ 2 yrs}\\
+   \textbf{researcher} & {\color{gray}\printdate{2010-3-1} -- \printdate{2012-2-29} $\cdot$ 2 yrs}\\
    & {\color{gray}Cologne, Germany} \\
    & \url{www.thp.uni-koeln.de/~lassig} \\
    & Statistical and mechanical models of biological evolution, in the Lässig group. \\
@@ -256,18 +258,18 @@
    & \\   
    & \\   
    \textbf{Teaching} & \textbf{Universität zu Köln} \\
-   \textbf{assistant} & {\color{gray}\DTMdisplaydate{2010}{9}{1}{-1} -- \DTMdisplaydate{2012}{1}{30}{-1} $\cdot$ 1 yr 5 mos} \\
+   \textbf{assistant} & {\color{gray}\printdate{2010-9-1} -- \printdate{2012-1-30} $\cdot$ 1 yr 5 mos} \\
    & {\color{gray}Cologne, Germany} \\   
    & Mathematics and statistical physics for Bachelor students.\\
    & \\
    & \textbf{UPMC Sorbonne Universités} \\
-   & {\color{gray}\DTMdisplaydate{2005}{10}{1}{-1} -- \DTMdisplaydate{2009}{8}{31}{-1} $\cdot$ 3 yrs 11 mos} \\
+   & {\color{gray}\printdate{2005-10-1} -- \printdate{2009-8-31} $\cdot$ 3 yrs 11 mos} \\
    & {\color{gray}Paris, France} \\
    & Thermodynamics, optics and waves, mathematical methods for Bachelor students. \\
    & \\   
    & \\   
    \textbf{Doctoral} & \textbf{Laboratoire de Physique Statistique (LPS), École normale supérieure} \\
-   \textbf{researcher} & {\color{gray}\DTMdisplaydate{2005}{9}{1}{-1} -- \DTMdisplaydate{2009}{12}{31}{-1} $\cdot$ 4 yrs 4 mos} \\
+   \textbf{researcher} & {\color{gray}\printdate{2005-9-1} -- \printdate{2009-12-31} $\cdot$ 4 yrs 4 mos} \\
    & {\color{gray}Paris, France} \\
    & \href{http://www.labos.upmc.fr/ljp/?article7}{www.labos.upmc.fr/ljp/?article7} $\cdot$ \href{http://www.lps.ens.fr/?lang=en}{www.lps.ens.fr} \\
    & Theoretical and experimental biophysics, in the Chatenay group: Dynamics of gene regulatory networks. \\
@@ -287,7 +289,7 @@
    & \\
    & \\   
    \textbf{Volunteering} & \textbf{Celsius} \\
-   \textbf{Founding} & {\color{gray}\DTMdisplaydate{2007}{8}{1}{-1} -- \DTMdisplaydate{2009}{8}{31}{-1} $\cdot$ 2 yrs 1 mo} \\
+   \textbf{Founding} & {\color{gray}\printdate{2007-8-1} -- \printdate{2009-8-31} $\cdot$ 2 yrs 1 mo} \\
    \textbf{member} & {\color{gray}Paris, France} \\
    & Celsius was a think tank with the goal of developing the European project. \\
    & \\   
@@ -299,17 +301,17 @@
    & \\
    & \\   
    \textbf{Internships} & \textbf{Laboratoire de l'Accélérateur Linéaire (LAL), Université Paris-Sud} \\
-   & {\color{gray}\DTMdisplaydate{2005}{2}{1}{-1} -- \DTMdisplaydate{2005}{3}{31}{-1} $\cdot$ 2 mos} \\
+   & {\color{gray}\printdate{2005-2-1} -- \printdate{2005-3-31} $\cdot$ 2 mos} \\
    & {\color{gray}Orsay, France} \\
    & Theoretical particle physics, in the Davier group: Computation of fundamental physical quantities for high energy physics from particle collision experiments data. \\
    & \\
    & \textbf{Deutsches Elektronen-Synchrotron (DESY), Humboldt-Universität zu Berlin} \\
-   & {\color{gray}\DTMdisplaydate{2003}{1}{17}{-1} -- \DTMdisplaydate{2003}{8}{31}{-1} $\cdot$ 7 mos} \\
+   & {\color{gray}\printdate{2003-1-17} -- \printdate{2003-8-31} $\cdot$ 7 mos} \\
    & {\color{gray}Zeuthen, Germany} \\
    & Theoretical particle physics, in the Jegerlehner group: Analysis of experimental data with ad hoc and first-principle mathematical models of elementary particles. \\
    & \\
    & \textbf{Laboratoire Kastler Brossel (LKB), École normale supérieure} \\
-   & {\color{gray}\DTMdisplaydate{2002}{6}{1}{-1} -- \DTMdisplaydate{2002}{8}{31}{-1} $\cdot$ 3 mos} \\
+   & {\color{gray}\printdate{2002-6-1} -- \printdate{2002-8-31} $\cdot$ 3 mos} \\
    & {\color{gray}Paris, France} \\   
    & Experimental quantum physics, in the Grynberg group: Construction of an optical atom trap. \\
 \end{longtable}
@@ -324,20 +326,20 @@
    \Large{Education} & \\
    & \\
    \textbf{Certifications} & \textbf{Coursera}\\
-   & {\color{gray}\DTMdisplaydate{2016}{1}{1}{-1} -- \DTMdisplaydate{2016}{3}{31}{-1} $\cdot$ 3 mos} \\
+   & {\color{gray}\printdate{2016-1-1} -- \printdate{2016-3-31} $\cdot$ 3 mos} \\
    & Practical Predictive Analytics: Models and Methods \\
    & Machine Learning \\
    & Data Manipulation at Scale: Systems and Algorithms \\
    & \\
    & \\   
    \textbf{Ph.D.} & \textbf{École normale supérieure}\\
-   & {\color{gray}\DTMdisplaydate{2005}{9}{1}{-1} -- \DTMdisplaydate{2009}{12}{31}{-1} $\cdot$ 4 yrs 4 mos} \\
+   & {\color{gray}\printdate{2005-9-1} -- \printdate{2009-12-31} $\cdot$ 4 yrs 4 mos} \\
    & {\color{gray}Paris, France} \\
    & Theoretical and experimental biophysics: Dynamics of gene regulatory networks. See ``Experience'' above for details. \\
    & \\
    & \\   
    \textbf{B.Sc. \&} & \textbf{École normale supérieure} \\
-   \textbf{M.Sc.} & {\color{gray}\DTMdisplaydate{2001}{9}{1}{-1} -- \DTMdisplaydate{2005}{8}{31}{-1} $\cdot$ 4 yrs} \\
+   \textbf{M.Sc.} & {\color{gray}\printdate{2001-9-1} -- \printdate{2005-8-31} $\cdot$ 4 yrs} \\
    & {\color{gray}Paris, France} \\
    & Theoretical and mathematical physics: specialization in particle physics and statistical physics. \\
    & \\
@@ -354,7 +356,7 @@
 
 \noindent \begin{longtable}{@{}p{3.1cm}@{}@{}p{13.9cm}@{}} 
    \textbf{M.A.} & \textbf{École nationale supérieure des arts décoratifs} \\
-   & {\color{gray}\DTMdisplaydate{2003}{9}{1}{-1} -- \DTMdisplaydate{2004}{8}{31}{-1} $\cdot$ 1 yr} \\
+   & {\color{gray}\printdate{2003-9-1} -- \printdate{2004-8-31} $\cdot$ 1 yr} \\
    & {\color{gray}Paris, France} \\
    & CGI, 3d animation, post-production.
 \end{longtable}
