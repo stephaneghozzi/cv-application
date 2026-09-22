@@ -1,0 +1,43 @@
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[USenglish]{babel}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{tikz}
+
+\setbeamertemplate{navigation symbols}{}
+\defbeamertemplate{footline}{title and frame number}{%
+    \color{gray!95}
+    \hspace{2em} \inserttitle \hfill%
+    \insertframenumber\,/\,\inserttotalframenumber\kern2em\vskip2pt%
+    \vspace{0.2cm}%
+}
+\setbeamertemplate{footline}[title and frame number]{}
+\setbeamertemplate{frametitle}{
+    \vspace{0.5cm}
+    \insertframetitle
+}
+\setbeamertemplate{bibliography item}[text]
+\setlength{\fboxsep}{0pt}
+\setlength{\fboxrule}{0.1pt}
+\useinnertheme{circles}
+\usefonttheme{serif}
+
+\newcommand{\p}{\mathrm{p}}
+\newcommand{\x}{\bm{x}}
+\newcommand{\dd}{\bm{d}}
+\newcommand{\s}{\bm{s}}
+\definecolor{mplblue}{HTML}{1F77B4}
+\definecolor{mplorange}{HTML}{FF7F0E}
+\definecolor{mplgreen}{HTML}{2CA02C}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{subtitle}{fg=mplblue}
+\setbeamercolor{frametitle}{fg=mplblue}
+\setbeamercolor{structure}{fg=black}
+
+\hypersetup{colorlinks=true,linkcolor=mplblue,urlcolor=mplblue,citecolor=mplblue,anchorcolor=mplblue}
+

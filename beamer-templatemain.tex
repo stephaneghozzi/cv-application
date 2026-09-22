@@ -1,0 +1,101 @@
+\documentclass[8pt,aspectratio=169]{beamer}
+
+\include{presentation-beamer-header}
+
+\title{[Title]}
+\subtitle{
+    \vspace{1em}
+    \small 
+    Meeting \newline 
+    Place \newline 
+    Date of meeting
+    \normalsize
+}
+\author{
+    \newline \newline 
+    Stéphane Ghozzi \newline 
+    \small 
+    \href{mailto:hello@stephaneghozzi.com}{\nolinkurl{hello@stephaneghozzi.com}} 
+    \normalsize
+    % Author 2 \newline 
+    % \small 
+    % Affiliation \newline 
+    % \href{mailto:...@...}{\nolinkurl{...@...}} \newline \newline 
+    % \normalsize     
+}
+\date{}
+
+\begin{document}
+\frame[noframenumbering,plain]{\titlepage}
+
+\begin{frame}{Frame title 1}
+\protect\hypertarget{section-6}{}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      
+      left col ...
+
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      
+        \pause
+      
+        ... right col
+      
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Frame title 2}
+
+  \textcolor{mplblue}{Paragraph} 
+
+  \vspace{1em}
+
+  Bla bla ... \cite{Abbood2020}
+
+  \vspace{3em}
+
+  \pause
+
+  \textcolor{mplblue}{Math}
+
+  \vspace{1em}
+
+  $\hat\p(d|\x) = \sum_s\; \p(d|s)\; \p(s)$
+
+  \vfill
+
+  \tiny
+  \hfill \cite{Abbood2020,Yousefinaghani2019,Kogan2021}
+  \normalsize
+
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    Thanks!
+  \end{center}
+\end{frame}
+
+\begin{frame}[noframenumbering,plain]{References} 
+%\begin{frame}[noframenumbering,allowframebreaks]{References} 
+  \tiny
+  \bibliography{ref}
+  \bibliographystyle{IEEEtran-mod}
+  \normalsize
+\end{frame}
+
+\begin{frame}[noframenumbering,plain]
+  \begin{center}
+    \large
+    \textcolor{mplblue}{Appendix}
+    \normalsize
+  \end{center}
+\end{frame}
+
+\begin{frame}[noframenumbering,plain]
+  some additional information
+\end{frame}
+
+\end{document}
